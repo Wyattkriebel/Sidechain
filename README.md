@@ -1,4 +1,4 @@
-# protein-games
+# Sidechain
 
 Browser games for undergraduate biochemistry, each with a scaffolded high-school
 mode. Python precomputes puzzle data offline; the frontend is static JavaScript
@@ -9,7 +9,6 @@ side-chain chemistry rather than letters: a class tier per position plus a
 Kyte–Doolittle hydropathy compass. Solving reveals the real protein motif you
 just built.
 
-**The Column** — a purification puzzle. Not yet implemented; see the build spec.
 
 ## Quick start
 
@@ -139,7 +138,7 @@ obvious.
 - 100 points per unused guess, relative to the mode's own limit
 - plus 25 per guess in which all five positions were at least class-correct
 
-The second term is the point of the game. A player can reach the answer in six
+The second term is the game's point. A player can reach the answer in six
 guesses by brute force or in six guesses without ever picking a wrong class; the
 second player understands the chemistry, and the score says so.
 
