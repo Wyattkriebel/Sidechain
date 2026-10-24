@@ -1,0 +1,120 @@
+/* tokens.css — shared design tokens for the protein-games suite.
+   Light palette is defined on bare :root; dark is redefined twice so that
+   both the OS setting and an explicit data-theme stamp resolve correctly. */
+
+:root {
+  /* ground + ink */
+  --paper:        #EFF1EC;
+  --surface:      #FFFFFF;
+  --sunk:         #E4E8E0;
+  --ink:          #191C18;
+  --ink-2:        #4F5850;
+  --ink-3:        #7C857C;
+  --rule:         #D3D9CE;
+  --rule-strong:  #B9C2B4;
+
+  /* side-chain class colours — positive/negative follow the standard
+     electrostatic convention (blue basic, red acidic) */
+  --c-aliphatic:      #8A7620;
+  --c-aromatic:       #7B4E9E;
+  --c-polar:          #1F7A6C;
+  --c-positive:       #2260A6;
+  --c-negative:       #BC432B;
+  --c-conformational: #A83C72;
+
+  /* class tints for ringed tiles */
+  --t-aliphatic:      #F3EDD5;
+  --t-aromatic:       #EFE6F6;
+  --t-polar:          #DCEFEA;
+  --t-positive:       #DEEAF7;
+  --t-negative:       #F8E3DE;
+  --t-conformational: #F8E2ED;
+
+  /* wrong-class tiles: filled, so they never read as "not yet guessed" */
+  --miss-bg:  #C6CDC3;
+  --miss-ink: #656D63;
+
+  --good:  #2C7A4B;
+  --warn:  #A2671B;
+  --bad:   #A93B2C;
+
+  --shadow-sm: 0 1px 2px rgba(25,28,24,.07);
+  --shadow-md: 0 2px 4px rgba(25,28,24,.06), 0 10px 26px rgba(25,28,24,.08);
+
+  --f-display: "Bricolage Grotesque", "Helvetica Neue", sans-serif;
+  --f-body:    "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --f-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --r-sm: 3px;
+  --r-md: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:        #131614;
+    --surface:      #1C201D;
+    --sunk:         #181C19;
+    --ink:          #E9EDE7;
+    --ink-2:        #A2ACA2;
+    --ink-3:        #78827A;
+    --rule:         #2B312C;
+    --rule-strong:  #3D453E;
+
+    --c-aliphatic:      #D6BC52;
+    --c-aromatic:       #BA8FDD;
+    --c-polar:          #4FC0AC;
+    --c-positive:       #6BA8E8;
+    --c-negative:       #E8836C;
+    --c-conformational: #E88BB8;
+
+    --t-aliphatic:      #2E2A17;
+    --t-aromatic:       #292031;
+    --t-polar:          #15302C;
+    --t-positive:       #152838;
+    --t-negative:       #331F1A;
+    --t-conformational: #331D28;
+
+    --good: #5FBF83;
+    --warn: #D6A050;
+    --bad:  #E0786A;
+    --miss-bg:  #39413A;
+    --miss-ink: #949E95;
+
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.45);
+    --shadow-md: 0 2px 4px rgba(0,0,0,.4), 0 10px 26px rgba(0,0,0,.3);
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper:        #131614;
+  --surface:      #1C201D;
+  --sunk:         #181C19;
+  --ink:          #E9EDE7;
+  --ink-2:        #A2ACA2;
+  --ink-3:        #78827A;
+  --rule:         #2B312C;
+  --rule-strong:  #3D453E;
+
+  --c-aliphatic:      #D6BC52;
+  --c-aromatic:       #BA8FDD;
+  --c-polar:          #4FC0AC;
+  --c-positive:       #6BA8E8;
+  --c-negative:       #E8836C;
+  --c-conformational: #E88BB8;
+
+  --t-aliphatic:      #2E2A17;
+  --t-aromatic:       #292031;
+  --t-polar:          #15302C;
+  --t-positive:       #152838;
+  --t-negative:       #331F1A;
+  --t-conformational: #331D28;
+
+  --good: #5FBF83;
+  --warn: #D6A050;
+  --bad:  #E0786A;
+    --miss-bg:  #39413A;
+    --miss-ink: #949E95;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.45);
+  --shadow-md: 0 2px 4px rgba(0,0,0,.4), 0 10px 26px rgba(0,0,0,.3);
+}

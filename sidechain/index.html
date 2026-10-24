@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sidechain</title>
+<meta name="description" content="A daily five-residue peptide puzzle. The feedback reports side-chain chemistry, not letters.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="bar">
+    <h1 class="brand">Sidechain<span class="dot">.</span></h1>
+
+    <div class="modes" role="group" aria-label="Difficulty">
+      <button type="button" data-mode="easy" aria-pressed="false">Easy</button>
+      <button type="button" data-mode="core" aria-pressed="true">Core</button>
+      <button type="button" data-mode="hard" aria-pressed="false">Hard</button>
+    </div>
+
+    <button type="button" class="icon-btn" id="btn-stats" aria-label="Statistics" title="Statistics">
+      <svg viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M2 14V9M6 14V4M10 14V7M14 14V2" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <button type="button" class="icon-btn" id="btn-help" aria-label="How to play" title="How to play">
+      <svg viewBox="0 0 16 16" aria-hidden="true">
+        <circle cx="8" cy="8" r="6.4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        <path d="M6.2 6.1a1.85 1.85 0 1 1 2.1 2.2v1.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="8.3" cy="11.6" r=".85" fill="currentColor"/>
+      </svg>
+    </button>
+  </header>
+
+  <div class="meta">
+    <span id="meta-left">&nbsp;</span>
+    <span class="target" id="target" hidden></span>
+    <span class="right" id="meta-right">&nbsp;</span>
+  </div>
+
+  <div class="hints" id="hints" hidden aria-label="Class of each position"></div>
+  <main class="board" id="board" aria-label="Guess board"></main>
+
+  <div class="pad" id="pad" aria-label="Residue keyboard"></div>
+
+  <p class="foot">
+    Side-chain classes and Kyte&ndash;Doolittle hydropathy.
+    Motifs cited to UniProt &middot; <a href="https://github.com/">source</a>
+  </p>
+
+</div>
+
+<script src="../data/puzzles.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
